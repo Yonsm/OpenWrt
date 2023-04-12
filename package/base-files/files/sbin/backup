@@ -1,0 +1,14 @@
+#!/bin/sh
+[ $1 ] && DIR=$1/etc || DIR=/opt/etc
+[ ! -d $DIR ] && mkdir -p $DIR
+while read SRC; do [ -e /etc/$SRC ] && cp -a /etc/$SRC $DIR; done <<\EOF
+config
+dropbear
+samba
+ksmbd
+passwd
+shadow
+uhttpd.crt
+uhttpd.key
+rc.local
+EOF
