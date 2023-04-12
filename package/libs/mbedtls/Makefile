@@ -96,6 +96,8 @@ CMAKE_OPTIONS += \
 	-DENABLE_PROGRAMS:Bool=ON
 
 define Build/Configure
+	sed -i '/fuzz/d' $(PKG_BUILD_DIR)/programs/CMakeLists.txt
+	sed -i '/test/d' $(PKG_BUILD_DIR)/programs/CMakeLists.txt
 	$(Build/Configure/Default)
 
 	awk 'BEGIN { rc = 1 } \
