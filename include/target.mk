@@ -52,8 +52,8 @@ DEFAULT_PACKAGES.nas:=\
 	lsblk \
 	mdadm
 # For router targets
-DEFAULT_PACKAGES.router:=\
-	dnsmasq \
+DEFAULT_PACKAGES.router:=block-mount dnsmasq-full htop luci luci-app-commands luci-app-ddns luci-app-ssr-plus luci-app-uhttpd luci-app-upnp luci-app-xfrpc ddns-scripts-dnspod ddns-scripts-aliyun openssh-sftp-server iperf3\
+	luci-theme-argon \
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
